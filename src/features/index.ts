@@ -1,0 +1,6 @@
+export { default as Header } from './Header/Header'
+export { default as Achievements } from './Achievements/Achievements'
+export * from './UserProfile/userProfileSlice'
+export { default as useUserProfile } from './UserProfile/hooks/useUserProfile'
+export { default as useUserMetaData } from './UserProfile/hooks/useUserMetaData'
+export { default as WelcomeRemark } from './UserProfile/components/WelcomeRemark/WelcomeRemark'

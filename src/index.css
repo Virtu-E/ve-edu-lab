@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    /* Base heading styles - font family and default colors */
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-mier text-primary-500;
+    }
+
+    /* Specific heading sizes - exactly as you specified */
+    h1 {
+        @apply text-[48px] leading-tight font-bold;
+    }
+
+    h2 {
+        @apply text-[36px] leading-tight font-semibold;
+    }
+
+    h3 {
+        @apply text-[30px] leading-snug font-semibold;
+    }
+
+    h4 {
+        @apply text-[24px] leading-snug font-semibold;
+    }
+
+    h5 {
+        @apply text-[20px] leading-normal font-medium;
+    }
+
+    h6 {
+        @apply text-[18px] leading-normal font-medium;
+    }
+}
+
+
+@layer components {
+    /* Base button styles with professional effects */
+    .btn {
+        @apply inline-flex items-center justify-center font-mier font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-sm hover:shadow-md active:shadow-sm transform hover:-translate-y-0.5 active:translate-y-0;
+    }
+
+    /* Button Variants - Primary, Secondary, Tertiary with professional shadows */
+    .btn-primary {
+        @apply btn bg-primary text-white hover:bg-primary-600 focus:ring-primary-500 active:bg-primary-700 shadow-glow-primary hover:shadow-glow-primary;
+    }
+
+    .btn-secondary {
+        @apply btn bg-secondary text-white hover:bg-secondary-600 focus:ring-secondary-500 active:bg-secondary-700 shadow-glow-secondary hover:shadow-glow-secondary;
+    }
+
+    .btn-tertiary {
+        @apply btn bg-tertiary text-white hover:bg-tertiary-600 focus:ring-tertiary-500 active:bg-tertiary-700 shadow-glow-tertiary hover:shadow-glow-tertiary;
+    }
+
+    /* Outline Variants with enhanced hover effects */
+    .btn-primary-outline {
+        @apply btn border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-white focus:ring-primary-500 hover:shadow-glow-primary;
+    }
+
+    .btn-secondary-outline {
+        @apply btn border-2 border-secondary text-secondary bg-transparent hover:bg-secondary hover:text-white focus:ring-secondary-500 hover:shadow-glow-secondary;
+    }
+
+    .btn-tertiary-outline {
+        @apply btn border-2 border-tertiary text-tertiary bg-transparent hover:bg-tertiary hover:text-white focus:ring-tertiary-500 hover:shadow-glow-tertiary;
+    }
+
+    /* Ghost Variants with subtle animations */
+    .btn-primary-ghost {
+        @apply btn text-primary bg-transparent hover:bg-primary-50 focus:ring-primary-500 hover:shadow-soft;
+    }
+
+    .btn-secondary-ghost {
+        @apply btn text-secondary bg-transparent hover:bg-secondary-50 focus:ring-secondary-500 hover:shadow-soft;
+    }
+
+    .btn-tertiary-ghost {
+        @apply btn text-tertiary bg-transparent hover:bg-tertiary-50 focus:ring-tertiary-500 hover:shadow-soft;
+    }
+
+    /* Button Sizes with proper shadows */
+    .btn-xs {
+        @apply px-2 py-1 text-xs min-h-[24px] shadow-xs hover:shadow-sm;
+    }
+
+    .btn-sm {
+        @apply px-3 py-1.5 text-sm min-h-[32px] shadow-sm hover:shadow-md;
+    }
+
+    .btn-md {
+        @apply px-4 py-2 text-base min-h-[40px] shadow-sm hover:shadow-md;
+    }
+
+    .btn-lg {
+        @apply px-6 py-3 text-lg min-h-[48px] shadow-md hover:shadow-lg;
+    }
+
+    .btn-xl {
+        @apply px-8 py-4 text-xl min-h-[56px] shadow-lg hover:shadow-xl;
+    }
+
+    /* Icon Button Sizes with perfect shadows */
+    .btn-icon-xs {
+        @apply btn w-6 h-6 p-0 shadow-xs hover:shadow-sm;
+    }
+
+    .btn-icon-sm {
+        @apply btn w-8 h-8 p-0 shadow-sm hover:shadow-md;
+    }
+
+    .btn-icon-md {
+        @apply btn w-10 h-10 p-0 shadow-sm hover:shadow-md;
+    }
+
+    .btn-icon-lg {
+        @apply btn w-12 h-12 p-0 shadow-md hover:shadow-lg;
+    }
+
+    /* Special Effect Modifiers */
+    .btn-animated {
+        @apply hover:animate-button-pop;
+    }
+
+    .btn-spring {
+        @apply hover:animate-spring;
+    }
+
+    .btn-glow {
+        @apply animate-glow;
+    }
+
+    .btn-float {
+        @apply animate-float;
+    }
+
+    /* Loading State with animation */
+    .btn-loading {
+        @apply relative cursor-wait;
+    }
+
+    .btn-loading::after {
+        content: '';
+        @apply absolute inset-0 rounded-lg bg-white bg-opacity-20 animate-pulse;
+    }
+
+    /* Enhanced Disabled State */
+    .btn:disabled {
+        @apply opacity-50 cursor-not-allowed pointer-events-none shadow-none transform-none;
+    }
+
+    /* Professional Card Styles */
+    .card {
+        @apply bg-white rounded-xl border border-border p-6 hover:shadow-sm transition-all duration-200;
+    }
+
+    .card-interactive {
+        @apply card cursor-pointer hover:shadow-lg hover:-translate-y-2;
+    }
+
+    .card-elevated {
+        @apply card shadow-medium hover:shadow-hard;
+    }
+
+    /* Input Styles with professional effects */
+    .input-professional {
+        @apply block w-full px-4 py-3 text-primary-900 placeholder-primary-400 border border-primary-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 shadow-xs focus:shadow-md;
+    }
+
+    /* Professional Modal/Overlay backdrop */
+    .backdrop-professional {
+        @apply fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm animate-fade-in;
+    }
+
+    /* Professional notification/toast styles */
+    .toast {
+        @apply px-4 py-3 rounded-lg shadow-lg border animate-slide-right;
+    }
+
+    .toast-success {
+        @apply toast bg-tertiary-50 border-tertiary-200 text-tertiary-800;
+    }
+
+    .toast-error {
+        @apply toast bg-red-50 border-red-200 text-red-800;
+    }
+
+    .toast-warning {
+        @apply toast bg-yellow-50 border-yellow-200 text-yellow-800;
+    }
+
+    .toast-info {
+        @apply toast bg-secondary-50 border-secondary-200 text-secondary-800;
+    }
+}
