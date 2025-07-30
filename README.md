@@ -21,6 +21,7 @@ This React TypeScript frontend represents the primary user interface layer of th
 ![VirtuEducate Platform Demo](./public/virtu.gif)
 
 ## For the backend code, see: https://github.com/Virtu-E/ve-edu-vault
+## For authentication flow, see : https://github.com/Virtu-E/ve-edx-auth
 
 ## Project Context
 
