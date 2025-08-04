@@ -22,13 +22,14 @@ This React TypeScript frontend represents the primary user interface layer of th
 
 ## For the backend code, see: https://github.com/Virtu-E/ve-edu-vault
 ## For authentication flow, see : https://github.com/Virtu-E/ve-edx-auth
+## Live Application : https://www.virtueducate.com/ ( Beta Version - Login & Explore )
 
 ## Project Context
 
 The following documentation illustrates the architectural thinking, design patterns, and technical decisions that drive scalable frontend development in complex projects.
 
 The code is not complete for IP reasons. For a live demonstration of the platform in action, please see:
-- 🔗 **Live Application**: [Coming Soon - Deployed Instance]
+- 🔗 **Live Application**: https://www.virtueducate.com/ ( Beta Version - Login and Explore ) 
 
 ---
 
